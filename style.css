@@ -9,3 +9,637 @@ License:
 Text Domain: mvl
 Tags: wordpress, code php, seo.
 */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #fff; /* Light grey background for a clean look */
+  color: #333; /* Dark grey text for readability */
+  line-height: 1.6; /* Spacing between lines for better readability */
+  font-size: 16px; /* Base font size */
+  text-align: left; /* Default text alignment */
+  background: url("https://static1.amica-travel.com/uploads/2017/04/background-texture.jpg");
+  background-size: contain;
+  background-position: bottom;
+}
+
+a {
+  color: #007bff; /* Standard link color */
+  text-decoration: none; /* No underline on links */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+a:hover {
+  color: #5fbdb6 !important; /* Darker shade on hover */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #222;
+  margin-top: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%; /* Responsive images */
+  height: auto;
+  display: block; /* Remove bottom margin */
+}
+
+.container {
+  width: 90%; /* Wide container with padding */
+  max-width: 1200px; /* Max width for larger screens */
+  margin: 0 auto; /* Center container */
+  padding: 1em;
+}
+
+/* ------------------------------------------------------------------------------------- */
+.wpml-ls-statics-footer {
+  display: none;
+}
+
+.logo img {
+  max-width: 100px;
+}
+
+.logo a {
+  display: flex;
+}
+
+header {
+  position: sticky;
+  width: 100%;
+  z-index: 9;
+  background-color: #101010;
+  color: #fff;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  display: inline-grid;
+  align-items: center;
+}
+
+.wp_header {
+  display: grid;
+  grid-template-columns: 40px 1fr 200px;
+  gap: 20px;
+}
+
+header li {
+  list-style: none;
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.menu ul a {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.boxMxhSearch ul {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.boxMxhSearch a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.boxMxhSearch i {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.search {
+  cursor: pointer;
+}
+
+.boxMxhSearch {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  background: rgba(128, 128, 128, 0.2);
+  width: 40px;
+  justify-content: center;
+}
+
+.wp_header a {
+  color: #fff;
+  font-size: 15px;
+}
+
+footer {
+  padding: 10px 0px;
+  text-align: center;
+  background-color: #101010;
+  color: #bbb;
+  margin-top: 80px;
+}
+
+p.copyright {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.menu-item-has-children {
+  position: relative;
+}
+
+.menu-item-has-children > a:after {
+  font-family: FontAwesome;
+  font-display: block;
+  content: "\f107";
+  margin-left: 5px;
+  opacity: 0.6;
+}
+
+.menu-item-has-children:hover > ul.sub-menu {
+  visibility: visible;
+  transition: 1s all;
+}
+
+.menu ul li ul.sub-menu {
+  visibility: hidden;
+  position: absolute;
+  background-color: #101010;
+  display: flex;
+  flex-direction: column;
+  gap: inherit;
+
+  align-items: start;
+}
+
+.menu ul li ul.sub-menu > li {
+  display: block;
+  min-width: 250px;
+  text-align: left;
+}
+
+.menu ul li ul.sub-menu > li > a {
+  padding: 0px 20px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  text-align: left;
+  display: block;
+}
+
+.menu ul li ul.sub-menu > li > a:hover {
+  transition: 1s all;
+  background-color: rgba(128, 128, 128, 0.2);
+}
+
+li.languages {
+  display: flex;
+  gap: 8px;
+}
+
+.languages a {
+  opacity: 0.5;
+}
+
+.languages a:hover {
+  opacity: 1;
+  transition: 1s all;
+}
+
+.lang_active a {
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.languages img {
+  width: 30px;
+}
+
+.menu_nav_mobi {
+  display: none;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: block;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wp_logo img {
+  width: 250px;
+}
+
+.wp_logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo {
+}
+
+#bannerHomeText {
+  font-size: 13px;
+  font-style: normal;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: #222;
+  letter-spacing: 0.1em;
+}
+
+.banner_home {
+  position: relative;
+}
+
+.banner_home > img {
+  height: 450px;
+  display: block;
+}
+
+.banner_home_content_box {
+  display: block;
+  color: #fff;
+  background: #222;
+  padding: 10px 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner_home_content_box h2 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.form_search_title {
+  padding-bottom: 12px;
+  padding-top: 45px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.wp_form_search form {
+  position: relative;
+}
+
+input.input_search {
+  width: 100%;
+  font-style: normal;
+  height: 42px;
+  border: 1px solid #eaeaea;
+  padding-left: 44px;
+  padding-right: 15px;
+  background: #fff;
+}
+
+button.btn_search {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 42px;
+  text-align: center;
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+.button_home_swiper {
+  position: absolute;
+  top: 50%;
+  height: 44px;
+  width: 34px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  opacity: 0.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9;
+  cursor: pointer;
+}
+
+.home_swiper_button_next {
+  left: 0;
+}
+
+.home_swiper_button_prev {
+  right: 0;
+}
+
+#two {
+  margin-top: 40px;
+}
+
+.wp_two {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  text-align: center;
+  width: 930px;
+  margin: auto;
+}
+
+.box_two_title {
+  background-image: url(https://static1.amica-travel.com/uploads/2017/04/bloc-intro-vietnam.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box_two_title a {
+  font-size: 14px;
+  color: #222222;
+  font-weight: 700;
+}
+
+#three {
+  margin-top: 40px;
+}
+
+.post_new h3 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.wp_three {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 30px;
+}
+
+.info_post {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #777;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.image_avatar img {
+  width: 100%;
+}
+
+.image_avatar {
+  margin-bottom: 25px;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+}
+
+p.the_content {
+  font-size: 1rem;
+  color: #333;
+}
+
+.post_new {
+  border-bottom: 1px solid #cacaca;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+
+.home_list_post_col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.post_new.off h3 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.post_new.off .info_post {
+  font-size: 13px;
+}
+
+.home_list_sidebar li {
+  list-style: none;
+}
+
+.home_list_sidebar li a {
+  font-size: 8pt;
+  color: #333;
+}
+
+.home_list_sidebar li.active a {
+  font-size: 17px;
+}
+
+.home_list_sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.listCategoryPost ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+h3.title_sidebar {
+  display: block;
+  position: relative;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #101010;
+  text-transform: uppercase;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+h3.title_sidebar:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-top: 7px solid #c4c4c4;
+  border-right: 9px solid transparent !important;
+  border-left: 9px solid transparent !important;
+  bottom: -8px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -9px;
+}
+
+.form_search input {
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+  margin: 0;
+  font-style: italic;
+  background: #fff;
+}
+
+.form_search button {
+  cursor: pointer;
+  padding: 12px 16px;
+  margin-top: 10px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-align: center;
+  border: none;
+  background: #5fbdb6;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.witghet_sidebar.post a {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.15);
+}
+
+.witghet_sidebar.tag ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.witghet_sidebar.tag ul a {
+  background: #2c3338;
+  padding: 8px 12px;
+  font-size: 13px;
+  border-radius: 2px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.wp_four_box_content {
+  text-align: center;
+  background-image: url(http://localhost/xplorevietnamtravel/wp-content/uploads/2024/08/bloc-intro-vietnam-removebg-preview.png);
+  padding: 1% 7%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wp_four_box_content h2 {
+  font-family: "Grand Hotel", cursive;
+  font-size: 38px;
+  color: #000;
+  padding-bottom: 0;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.wp_four_box_content p {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+/* ------------------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 1240px) {
+  .wp {
+    width: 1140px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 18px; /* Larger font size on tablets and above */
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .wp {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .logo {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .wp_header {
+    grid-template-columns: 80px 1fr;
+  }
+
+  .menu_nav_mobi {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .menu_nav_mobi i {
+    font-size: 23px;
+  }
+}

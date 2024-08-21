@@ -39,8 +39,8 @@ add_action('manage_posts_custom_column', 'ST4_columns_content', 10, 2);
 // Tạo thêm menu 
 function taothemmenu()
 {
-	register_nav_menu('menu-left', __('Menu left', 'mvl'));
-	register_nav_menu('menu-right', __('Menu right', 'mvl'));
+	register_nav_menu('header', __('Menu Header', 'mvl'));
+	register_nav_menu('footer', __('Menu Footer', 'mvl'));
 }
 add_action('init', 'taothemmenu');
 
@@ -49,10 +49,9 @@ function taothemwidgets()
 {
 	register_sidebar(
 		array(
-			'name' => esc_html__('Head', 'mvl'),
-			'',
-			'id' => 'head',
-			'description' => esc_html__('Khu vực header'),
+			'name' => esc_html__('Widgets', 'mvl'),
+			'id' => 'widgets-sidebar',
+			'description' => esc_html__('Khu vực Sidebar'),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
 			'before_title' => '<h1 class="widget-title">',
@@ -63,21 +62,6 @@ function taothemwidgets()
 }
 add_action('init', 'taothemwidgets');
 
-function taofooter()
-{
-	register_sidebar(
-		array(
-			'name' => esc_html__('Footer', 'mvl'),
-			'id' => 'footer',
-			'description' => esc_html__('Khu vực footer'),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h1 class="widget-title">',
-			'after_title' => '</h1>'
-		)
-	);
-}
-add_action('init', 'taofooter');
 function theme_scripts()
 {
 	wp_enqueue_style('theme-style', get_stylesheet_uri());
@@ -136,8 +120,8 @@ if (function_exists('acf_add_options_page')) {
 	));
 	// Add sub page.
 	$child = acf_add_options_page(array(
-		'page_title' => __('Page home'),
-		'menu_title' => __('Page home'),
+		'page_title' => __('Sidebar'),
+		'menu_title' => __('Sidebar'),
 		'parent_slug' => $parent['menu_slug'],
 	));
 }
